@@ -150,3 +150,6 @@
     (clojure.tools.namespace.repl/refresh)"))
 
 (define-key clojure-mode-map (kbd "M-r") 'cider-namespace-refresh)
+
+(delete-selection-mode 1)
+(undo-tree-mode)
