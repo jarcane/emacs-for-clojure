@@ -130,3 +130,23 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+;; Mac keyboard shortcut swap
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
+
+;; Easy paren keys
+(define-key key-translation-map (kbd "ö") (kbd "("))
+(define-key key-translation-map (kbd "ä") (kbd "["))
+(define-key key-translation-map (kbd "å") (kbd "{"))
+(define-key key-translation-map (kbd "¨") (kbd "~"))
+
+;; Cider restart shortcut
+(defun cider-namespace-refresh ()
+  (interactive)
+  (cider-interactive-eval
+   "(require 'clojure.tools.namespace.repl)
+    (clojure.tools.namespace.repl/refresh)"))
+
+(define-key clojure-mode-map (kbd "M-r") 'cider-namespace-refresh)
