@@ -1,0 +1,24 @@
+ls
+cd projects
+ls
+lein new playground
+cd playground/
+ls
+find-file project.clj 
+cd ..
+cd matrikkeli/
+git status
+git pull
+git pull
+build
+./build.sh 
+ls
+cd target
+ls
+cd ..
+lein develop
+lein develop
+lein develop
+lein develop
+lein develop
+lein develop
