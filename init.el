@@ -178,12 +178,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-quick-help-delay 0.5)
+ '(clean-buffer-list-delay-general 1)
  '(clojure-defun-indents
    (quote
     (init-state did-mount render-state GET POST PUT DELETE ANY HEAD PATCH OPTIONS GET* POST* PUT* DELETE* ANY* HEAD* PATCH* OPTIONS* def describe it context swaggered middlewares context* fact facts provided fact-group run* will-mount render render-state init-state did-mount should-update will-receive-props will-update did-update display-name will-unmount this-as for-map fnk letk go-loop add-encoder with-call-in with-eval-in with-pre-wrap with-post-wrap register-handler register-sub)))
  '(coffee-tab-width 2)
  '(delete-selection-mode t)
- '(global-auto-complete-mode t))
+ '(global-auto-complete-mode t)
+ '(midnight-mode nil nil (midnight)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
