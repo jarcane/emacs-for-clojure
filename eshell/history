@@ -1,24 +1,128 @@
-ls
-cd projects
-ls
-lein new playground
-cd playground/
-ls
-find-file project.clj 
+rake
+rake
+rake
+rake
+rake
+rake
+rake
+rake
+rake
 cd ..
-cd matrikkeli/
-git status
-git pull
-git pull
-build
-./build.sh 
+rake
+rake
+rake
+rake
+rake
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
 ls
-cd target
+cd projects/merkki/
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein deploy clojars
+lein deploy clojars
+lein test
+lein test
+lein test
+lein test
+clear
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein test
+lein codox
+lein clean
+lein marg
+lein clean
+lein test
+lein deploy clojars
+lein deploy clojars
+cd ../..
 ls
-cd ..
-lein develop
-lein develop
-lein develop
-lein develop
-lein develop
-lein develop
+exit
+exit
+lein test
+cd ../../..
+git grep "query-person2"
+git grep "query-person"
+(quit)
+exit

@@ -1,0 +1,2 @@
+
+("tenzing" ("resources" ("leiningen" ("new" ("tenzing" "app.cljs" "app.cljs.edn" "app_test.cljs" "build.boot" "gitignore" "index.html" "less.main.less" "om-app.cljs" "reagent-app.cljs" "sass.scss" "styles.clj")))) ("src" ("leiningen" ("new" "tenzing.clj"))) "LICENSE" "README.markdown" "project.clj")

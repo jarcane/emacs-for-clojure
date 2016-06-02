@@ -1,0 +1,2 @@
+
+("compojure-api-template" ("resources" ("leiningen" ("new" ("compojure_api" "README.md" "clojure_core_test.clj" "handler.clj" "midje_core_test.clj" "project.clj")))) ("src" ("leiningen" ("new" "compojure_api.clj"))) ("target" ("classes" ("META-INF" ("maven" ("compojure-api" ("lein-template" "pom.properties"))))) ("stale" "extract-native.dependencies") "lein-template-0.14.0.jar") "README.md" "project.clj")

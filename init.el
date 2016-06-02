@@ -9,7 +9,7 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -142,6 +142,18 @@
 (define-key key-translation-map (kbd "å") (kbd "{"))
 (define-key key-translation-map (kbd "¨") (kbd "~"))
 
+;; Fix motherfucking blank goddamn lines.
+(defun my-delete-trailing-blank-lines ()
+      "Deletes all blank lines at the end of the file."
+      (interactive)
+      (save-excursion
+        (save-restriction
+          (widen)
+          (goto-char (point-max))
+          (delete-blank-lines))))
+
+(add-hook 'before-save-hook 'my-delete-trailing-blank-lines)
+
 ;; Cider restart shortcut
 (defun cider-namespace-refresh ()
   (interactive)
@@ -167,6 +179,7 @@
 
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; misc.
 (delete-selection-mode 1)
@@ -177,6 +190,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-ignore-case nil)
  '(ac-quick-help-delay 0.5)
  '(clean-buffer-list-delay-general 1)
  '(clojure-defun-indents
