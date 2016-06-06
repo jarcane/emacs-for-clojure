@@ -184,6 +184,7 @@
 ;; misc.
 (delete-selection-mode 1)
 (global-undo-tree-mode)
+(electric-indent-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
