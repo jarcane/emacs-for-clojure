@@ -66,7 +66,8 @@
     tagedit
 
     ;; git integration
-    magit))
+)
+  magit)
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -181,6 +182,36 @@
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 
+;; Elm stuff
+(require 'flycheck)
+(with-eval-after-load 'flycheck
+      '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
+
+(require 'company)
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'company-elm))
+(add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+
+(add-hook 'elm-mode-hook
+          (lambda ()
+            (setq company-backends '(company-elm))))
+
+;; Purescript stuff
+(add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
+
+;; specify path to the 'psc-ide' executable
+(require 'psc-ide)
+
+(add-hook 'purescript-mode-hook
+  (lambda ()
+    (psc-ide-mode)
+    (company-mode)))
+
+(add-hook 'purescript-mode-hook 'inferior-psci-mode)
+
+(global-set-key (kbd "C-SPC") 'company-complete)
+
+(add-hook 'purescript-mode-hook #'enable-paredit-mode)
 ;; misc.
 (delete-selection-mode 1)
 (global-undo-tree-mode)
@@ -200,10 +231,11 @@
  '(coffee-tab-width 2)
  '(delete-selection-mode t)
  '(global-auto-complete-mode t)
- '(midnight-mode nil nil (midnight)))
+ '(midnight-mode nil nil (midnight))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#eaeaea" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "Misc" :family "Atarist")))))

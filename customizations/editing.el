@@ -68,5 +68,3 @@
   (condition-case nil
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
-
-(setq electric-indent-mode nil)
